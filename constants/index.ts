@@ -4,365 +4,565 @@ export const API_URL = 'https://api.example.com/properties';
 export const PLACEHOLDER_IMAGE = '/assets/placeholder.jpg';
 
 
-export const PROPERTYLISTINGSAMPLE: PropertyProps []  =  [
-    {
-      name: "Villa Ocean Breeze",
-      address: {
-        state: "Seminyak",
-        city: "Bali",
-        country: "Indonesia"
-      },
-      rating: 4.89,
-      category: ["Luxury Villa", "Pool", "Free Parking"],
-      price: 3200,
-      offers: {
-        bed: "3",
-        shower: "3",
-        occupants: "4-6"
-      },
-      image: "https://example.com/image1.jpg",
-      discount: ""
+export const PROPERTYLISTINGSAMPLE: PropertyProps [] = [
+  {
+    name: "Modern Apartment",
+    address: {
+      state: "New York",
+      city: "New York",
+      country: "USA"
     },
-    {
-      name: "Mountain Escape Chalet",
-      address: {
-        state: "Aspen",
-        city: "Colorado",
-        country: "USA"
-      },
-      rating: 4.70,
-      category: ["Mountain View", "Fireplace", "Self Checkin"],
-      price: 1800,
-      offers: {
-        bed: "4",
-        shower: "2",
-        occupants: "5-7"
-      },
-      image: "https://example.com/image2.jpg",
-      discount: "30"
+    rating: 4.5,
+    category: ["Apartment", "Modern"],
+    price: 2000,
+    offers: {
+      bed: "2",
+      shower: "1",
+      occupants: "4"
     },
-    {
-      name: "Cozy Desert Retreat",
-      address: {
-        state: "Palm Springs",
-        city: "California",
-        country: "USA"
-      },
-      rating: 4.92,
-      category: ["Desert View", "Pet Friendly", "Self Checkin"],
-      price: 1500,
-      offers: {
-        bed: "2",
-        shower: "1",
-        occupants: "2-3"
-      },
-      image: "https://example.com/image3.jpg",
-      discount: ""
+    image: "/images/image-1.jpg",
+    discount: "10% off",
+    reviews: [
+      { name: "Alice", comment: "Great place!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Bob", comment: "Loved the view!", avatar: "/images/avatar-2.jpg", rating: 4 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Cozy Cottage",
+    address: {
+      state: "London",
+      city: "London",
+      country: "UK"
     },
-    {
-      name: "City Lights Penthouse",
-      address: {
-        state: "New York",
-        city: "New York",
-        country: "USA"
-      },
-      rating: 4.85,
-      category: ["City View", "Free WiFi", "24h Checkin"],
-      price: 4500,
-      offers: {
-        bed: "2",
-        shower: "2",
-        occupants: "2-4"
-      },
-      image: "https://example.com/image4.jpg",
-      discount: "15"
+    rating: 4.7,
+    category: ["Cottage", "Cozy"],
+    price: 1500,
+    offers: {
+      bed: "1",
+      shower: "1",
+      occupants: "3"
     },
-    {
-      name: "Riverside Cabin",
-      address: {
-        state: "Queenstown",
-        city: "Otago",
-        country: "New Zealand"
-      },
-      rating: 4.77,
-      category: ["Riverside", "Private Dock", "Free Kayaks"],
-      price: 2800,
-      offers: {
-        bed: "3",
-        shower: "2",
-        occupants: "4-6"
-      },
-      image: "https://example.com/image5.jpg",
-      discount: "20"
+    image: "/images/image-2.jpg",
+    discount: "15% off",
+    reviews: [
+      { name: "Chris", comment: "Very cozy and comfortable!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Dana", comment: "Perfect getaway spot.", avatar: "/images/avatar-2.jpg", rating: 4.5 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Luxury Villa",
+    address: {
+      state: "Los Angeles",
+      city: "Los Angeles",
+      country: "USA"
     },
-    {
-      name: "Modern Beachfront Villa",
-      address: {
-        state: "Sidemen",
-        city: "Bali",
-        country: "Indonesia"
-      },
-      rating: 4.95,
-      category: ["Beachfront", "Private Pool", "Chef Service"],
-      price: 5000,
-      offers: {
-        bed: "5",
-        shower: "4",
-        occupants: "8-10"
-      },
-      image: "https://example.com/image6.jpg",
-      discount: ""
+    rating: 4.8,
+    category: ["Villa", "Luxury"],
+    price: 5000,
+    offers: {
+      bed: "5",
+      shower: "4",
+      occupants: "10"
     },
-    {
-      name: "Lakeside Chalet",
-      address: {
-        state: "Banff",
-        city: "Alberta",
-        country: "Canada"
-      },
-      rating: 4.65,
-      category: ["Lakeside", "Mountain View", "Hiking Trails"],
-      price: 2300,
-      offers: {
-        bed: "3",
-        shower: "3",
-        occupants: "4-5"
-      },
-      image: "https://example.com/image7.jpg",
-      discount: "10"
+    image: "/images/image-3.jpg",
+    discount: "20% off",
+    reviews: [
+      { name: "Emma", comment: "Absolutely stunning!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Frank", comment: "Worth every penny.", avatar: "/images/avatar-2.jpg", rating: 4.8 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "City Loft",
+    address: {
+      state: "Paris",
+      city: "Paris",
+      country: "France"
     },
-    {
-      name: "Tropical Garden Villa",
-      address: {
-        state: "Koh Samui",
-        city: "Surat Thani",
-        country: "Thailand"
-      },
-      rating: 4.80,
-      category: ["Garden", "Free Parking", "Self Checkin"],
-      price: 2750,
-      offers: {
-        bed: "3",
-        shower: "3",
-        occupants: "5-6"
-      },
-      image: "https://example.com/image8.jpg",
-      discount: "25"
+    rating: 4.6,
+    category: ["Loft", "City"],
+    price: 3000,
+    offers: {
+      bed: "2",
+      shower: "2",
+      occupants: "6"
     },
-    {
-      name: "Urban Loft",
-      address: {
-        state: "Berlin",
-        city: "Berlin",
-        country: "Germany"
-      },
-      rating: 4.60,
-      category: ["City Center", "Free WiFi", "24h Checkin"],
-      price: 2000,
-      offers: {
-        bed: "2",
-        shower: "1",
-        occupants: "2-3"
-      },
-      image: "https://example.com/image9.jpg",
-      discount: ""
+    image: "/images/image-4.jpg",
+    discount: "5% off",
+    reviews: [
+      { name: "Grace", comment: "Amazing ambiance!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Hank", comment: "Great for business trips.", avatar: "/images/avatar-2.jpg", rating: 4.6 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Beach House",
+    address: {
+      state: "Malibu",
+      city: "Malibu",
+      country: "USA"
     },
-    {
-      name: "Secluded Forest Cabin",
-      address: {
-        state: "Whistler",
-        city: "British Columbia",
-        country: "Canada"
-      },
-      rating: 4.72,
-      category: ["Secluded", "Hot Tub", "Self Checkin"],
-      price: 2600,
-      offers: {
-        bed: "4",
-        shower: "2",
-        occupants: "5-7"
-      },
-      image: "https://example.com/image10.jpg",
-      discount: "40"
+    rating: 4.9,
+    category: ["House", "Beach"],
+    price: 4000,
+    offers: {
+      bed: "3",
+      shower: "2",
+      occupants: "8"
     },
-    {
-      name: "Cliffside Villa",
-      address: {
-        state: "Amalfi",
-        city: "Salerno",
-        country: "Italy"
-      },
-      rating: 4.93,
-      category: ["Cliffside", "Infinity Pool", "Sea View"],
-      price: 6000,
-      offers: {
-        bed: "4",
-        shower: "4",
-        occupants: "6-8"
-      },
-      image: "https://example.com/image11.jpg",
-      discount: "50"
+    image: "/images/image-5.jpg",
+    discount: "10% off",
+    reviews: [
+      { name: "Ivy", comment: "Loved the ocean view!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Jack", comment: "Perfect for families.", avatar: "/images/avatar-2.jpg", rating: 4.9 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Mountain Cabin",
+    address: {
+      state: "Aspen",
+      city: "Aspen",
+      country: "USA"
     },
-    {
-      name: "Coastal Escape Villa",
-      address: {
-        state: "Noosa",
-        city: "Queensland",
-        country: "Australia"
-      },
-      rating: 4.83,
-      category: ["Beachfront", "Pet Friendly", "Free Parking"],
-      price: 3400,
-      offers: {
-        bed: "3",
-        shower: "3",
-        occupants: "4-6"
-      },
-      image: "https://example.com/image12.jpg",
-      discount: ""
+    rating: 4.4,
+    category: ["Cabin", "Mountain"],
+    price: 1800,
+    offers: {
+      bed: "1",
+      shower: "1",
+      occupants: "2"
     },
-    {
-      name: "Historical Villa",
-      address: {
-        state: "Florence",
-        city: "Tuscany",
-        country: "Italy"
-      },
-      rating: 4.67,
-      category: ["Historical", "Free Breakfast", "Self Checkin"],
-      price: 2700,
-      offers: {
-        bed: "2",
-        shower: "2",
-        occupants: "2-4"
-      },
-      image: "https://example.com/image13.jpg",
-      discount: "35"
+    image: "/images/image-6.jpg",
+    discount: "7% off",
+    reviews: [
+      { name: "Kate", comment: "Great escape to nature.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Leo", comment: "Peaceful and quiet.", avatar: "/images/avatar-2.jpg", rating: 4.4 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Downtown Studio",
+    address: {
+      state: "Tokyo",
+      city: "Tokyo",
+      country: "Japan"
     },
-    {
-      name: "Downtown Apartment",
-      address: {
-        state: "Tokyo",
-        city: "Tokyo",
-        country: "Japan"
-      },
-      rating: 4.81,
-      category: ["City Center", "Free WiFi", "Public Transport"],
-      price: 2200,
-      offers: {
-        bed: "1",
-        shower: "1",
-        occupants: "2"
-      },
-      image: "https://example.com/image14.jpg",
-      discount: ""
+    rating: 4.7,
+    category: ["Studio", "Downtown"],
+    price: 2500,
+    offers: {
+      bed: "1",
+      shower: "1",
+      occupants: "3"
     },
-    {
-      name: "Luxury Safari Lodge",
-      address: {
-        state: "Serengeti",
-        city: "Mara",
-        country: "Tanzania"
-      },
-      rating: 4.97,
-      category: ["Safari", "Guided Tours", "Free Breakfast"],
-      price: 4500,
-      offers: {
-        bed: "4",
-        shower: "4",
-        occupants: "6-8"
-      },
-      image: "https://example.com/image15.jpg",
-      discount: "20"
+    image: "/images/image-7.jpg",
+    discount: "12% off",
+    reviews: [
+      { name: "Mia", comment: "Great location!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Noah", comment: "Very stylish.", avatar: "/images/avatar-2.jpg", rating: 4.7 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Penthouse Suite",
+    address: {
+      state: "Dubai",
+      city: "Dubai",
+      country: "UAE"
     },
-    {
-      name: "Countryside Cottage",
-      address: {
-        state: "Cotswolds",
-        city: "Gloucestershire",
-        country: "UK"
-      },
-      rating: 4.58,
-      category: ["Countryside", "Fireplace", "Self Checkin"],
-      price: 1800,
-      offers: {
-        bed: "2",
-        shower: "1",
-        occupants: "2-4"
-      },
-      image: "https://example.com/image16.jpg",
-      discount: "25"
+    rating: 4.9,
+    category: ["Suite", "Penthouse"],
+    price: 7000,
+    offers: {
+      bed: "4",
+      shower: "3",
+      occupants: "8"
     },
-    {
-      name: "Riverfront Mansion",
-      address: {
-        state: "Paris",
-        city: "Île-de-France",
-        country: "France"
-      },
-      rating: 4.86,
-      category: ["Riverfront", "Private Garden", "Self Checkin"],
-      price: 5000,
-      offers: {
-        bed: "4",
-        shower: "3",
-        occupants: "6-8"
-      },
-      image: "https://example.com/image17.jpg",
-      discount: "30"
+    image: "/images/image-8.jpg",
+    discount: "15% off",
+    reviews: [
+      { name: "Olivia", comment: "Luxury at its finest.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Paul", comment: "Amazing views!", avatar: "/images/avatar-2.jpg", rating: 4.9 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  }, {
+    name: "Coastal Apartment",
+    address: {
+      state: "Sydney",
+      city: "Sydney",
+      country: "Australia"
     },
-    {
-      name: "Ski Chalet",
-      address: {
-        state: "Zermatt",
-        city: "Valais",
-        country: "Switzerland"
-      },
-      rating: 4.75,
-      category: ["Mountain View", "Ski Access", "Fireplace"],
-      price: 3900,
-      offers: {
-        bed: "3",
-        shower: "3",
-        occupants: "4-5"
-      },
-      image: "https://example.com/image18.jpg",
-      discount: ""
+    rating: 4.6,
+    category: ["Apartment", "Coastal"],
+    price: 2200,
+    offers: {
+      bed: "2",
+      shower: "1",
+      occupants: "4"
     },
-    {
-      name: "Island Paradise Villa",
-      address: {
-        state: "Mahe",
-        city: "Victoria",
-        country: "Seychelles"
-      },
-      rating: 4.98,
-      category: ["Beachfront", "Private Pool", "Chef Service"],
-      price: 6500,
-      offers: {
-        bed: "5",
-        shower: "5",
-        occupants: "8-10"
-      },
-      image: "https://example.com/image19.jpg",
-      discount: "60"
+    image: "/images/image-9.jpg",
+    discount: "10% off",
+    reviews: [
+      { name: "Quinn", comment: "Loved the beach view!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Rachel", comment: "Perfect for a weekend getaway.", avatar: "/images/avatar-2.jpg", rating: 4.6 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Rustic Bungalow",
+    address: {
+      state: "Nashville",
+      city: "Nashville",
+      country: "USA"
     },
-    {
-      name: "Clifftop Retreat",
-      address: {
-        state: "Cape Town",
-        city: "Western Cape",
-        country: "South Africa"
-      },
-      rating: 4.78,
-      category: ["Ocean View", "Private Pool", "Self Checkin"],
-      price: 4100,
-      offers: {
-        bed: "3",
-        shower: "3",
-        occupants: "4-5"
-      },
-      image: "https://example.com/image20.jpg",
-      discount: ""
-    }
+    rating: 4.4,
+    category: ["Bungalow", "Rustic"],
+    price: 1700,
+    offers: {
+      bed: "1",
+      shower: "1",
+      occupants: "2"
+    },
+    image: "/images/image-10.jpg",
+    discount: "5% off",
+    reviews: [
+      { name: "Sam", comment: "Charming and cozy!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Taylor", comment: "Quiet and peaceful.", avatar: "/images/avatar-2.jpg", rating: 4.4 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Skyscraper Loft",
+    address: {
+      state: "Singapore",
+      city: "Singapore",
+      country: "Singapore"
+    },
+    rating: 4.8,
+    category: ["Loft", "Skyscraper"],
+    price: 3200,
+    offers: {
+      bed: "3",
+      shower: "2",
+      occupants: "6"
+    },
+    image: "/images/image-11.jpg",
+    discount: "12% off",
+    reviews: [
+      { name: "Victoria", comment: "Modern and luxurious.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Wesley", comment: "Incredible views of the city.", avatar: "/images/avatar-2.jpg", rating: 4.8 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Forest Cabin",
+    address: {
+      state: "Vancouver",
+      city: "Vancouver",
+      country: "Canada"
+    },
+    rating: 4.5,
+    category: ["Cabin", "Forest"],
+    price: 2000,
+    offers: {
+      bed: "2",
+      shower: "1",
+      occupants: "4"
+    },
+    image: "/images/image-12.jpg",
+    discount: "8% off",
+    reviews: [
+      { name: "Xavier", comment: "Peaceful retreat in nature.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Yasmine", comment: "Perfect place for relaxation.", avatar: "/images/avatar-2.jpg", rating: 4.5 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Desert Villa",
+    address: {
+      state: "Dubai",
+      city: "Dubai",
+      country: "UAE"
+    },
+    rating: 4.7,
+    category: ["Villa", "Desert"],
+    price: 4000,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "8"
+    },
+    image: "/images/image-13.jpg",
+    discount: "10% off",
+    reviews: [
+      { name: "Zane", comment: "Luxury in the desert!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Aisha", comment: "An unforgettable experience.", avatar: "/images/avatar-2.jpg", rating: 4.7 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Urban Apartment",
+    address: {
+      state: "Berlin",
+      city: "Berlin",
+      country: "Germany"
+    },
+    rating: 4.6,
+    category: ["Apartment", "Urban"],
+    price: 2500,
+    offers: {
+      bed: "2",
+      shower: "2",
+      occupants: "5"
+    },
+    image: "/images/image-14.jpg",
+    discount: "8% off",
+    reviews: [
+      { name: "Leona", comment: "Modern and centrally located.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Milo", comment: "Great for business travelers.", avatar: "/images/avatar-2.jpg", rating: 4.6 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Island Resort",
+    address: {
+      state: "Bali",
+      city: "Bali",
+      country: "Indonesia"
+    },
+    rating: 4.9,
+    category: ["Resort", "Island"],
+    price: 6000,
+    offers: {
+      bed: "4",
+      shower: "3",
+      occupants: "10"
+    },
+    image: "/images/image-15.jpg",
+    discount: "20% off",
+    reviews: [
+      { name: "Nina", comment: "Paradise on earth!", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Oscar", comment: "The best vacation spot.", avatar: "/images/avatar-2.jpg", rating: 4.9 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Historic Manor",
+    address: {
+      state: "Dublin",
+      city: "Dublin",
+      country: "Ireland"
+    },
+    rating: 4.8,
+    category: ["Manor", "Historic"],
+    price: 3500,
+    offers: {
+      bed: "3",
+      shower: "2",
+      occupants: "6"
+    },
+    image: "/images/image-16.jpg",
+    discount: "12% off",
+    reviews: [
+      { name: "Peter", comment: "A step back in time.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Quinn", comment: "Beautiful historical property.", avatar: "/images/avatar-2.jpg", rating: 4.8 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Tropical Villa",
+    address: {
+      state: "Phuket",
+      city: "Phuket",
+      country: "Thailand"
+    },
+    rating: 4.7,
+    category: ["Villa", "Tropical"],
+    price: 4500,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "8"
+    },
+    image: "/images/image-17.jpg",
+    discount: "15% off",
+    reviews: [
+      { name: "Kai", comment: "A true island getaway.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Lila", comment: "Exquisite tropical experience.", avatar: "/images/avatar-2.jpg", rating: 4.7 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Mountain Retreat",
+    address: {
+      state: "Aspen",
+      city: "Aspen",
+      country: "USA"
+    },
+    rating: 4.8,
+    category: ["Cabin", "Mountain"],
+    price: 3800,
+    offers: {
+      bed: "4",
+      shower: "3",
+      occupants: "10"
+    },
+    image: "/images/image-18.jpg",
+    discount: "10% off",
+    reviews: [
+      { name: "Ryan", comment: "Breathtaking mountain views.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Harper", comment: "Perfect for large families.", avatar: "/images/avatar-2.jpg", rating: 4.8 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "City Penthouse",
+    address: {
+      state: "New York",
+      city: "New York",
+      country: "USA"
+    },
+    rating: 4.9,
+    category: ["Apartment", "City"],
+    price: 5000,
+    offers: {
+      bed: "3",
+      shower: "3",
+      occupants: "6"
+    },
+    image: "/images/image-19.jpg",
+    discount: "12% off",
+    reviews: [
+      { name: "Elena", comment: "Luxurious and central location.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Chris", comment: "Ideal for business and leisure.", avatar: "/images/avatar-2.jpg", rating: 4.9 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  },
+  {
+    name: "Art Deco Studio",
+    address: {
+      state: "Paris",
+      city: "Paris",
+      country: "France"
+    },
+    rating: 4.6,
+    category: ["Studio", "Art Deco"],
+    price: 3200,
+    offers: {
+      bed: "2",
+      shower: "1",
+      occupants: "4"
+    },
+    image: "/images/image-20.jpg",
+    discount: "7% off",
+    reviews: [
+      { name: "Leo", comment: "Chic and stylish design.", avatar: "/images/avatar-1.jpg", rating: 5 },
+      { name: "Mila", comment: "Perfect for a weekend escape.", avatar: "/images/avatar-2.jpg", rating: 4.6 }
+    ],
+    images: [
+      "/images/detail-image-1.jpg",
+      "/images/detail-image-2.jpg",
+      "/images/detail-image-3.jpg",
+      "/images/detail-image-4.jpg"
+    ]
+  }
+    
 ];

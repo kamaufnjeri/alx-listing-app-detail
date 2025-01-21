@@ -2,8 +2,8 @@ import React from 'react';
 import Card from '../components/common/Card';
 import Button from '../components/common/Button';
 import { PLACEHOLDER_IMAGE, PROPERTYLISTINGSAMPLE } from '../constants';
-import HeroSection from '@/components/common/HeroSection';
-import FilterSection from '@/components/common/FilterSection';
+import HeroSection from '@/components/property/HeroSection';
+import FilterSection from '@/components/property/FilterSection';
 
 
 
@@ -15,7 +15,7 @@ const Home = () => {
 
 
       <h1 className="text-3xl font-bold mb-4">ALX Listing App</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
       {PROPERTYLISTINGSAMPLE.map((property) => (
           <Card key={property.name} property={property} />
         ))}

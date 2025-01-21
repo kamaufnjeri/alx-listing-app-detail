@@ -1,10 +1,11 @@
+import Link from "next/link";
 import Button from "../common/Button";
 
 const Header: React.FC = () => {
   return (
     <header className="bg-gray-800 text-white p-4">
-      <div className="flex justify-between items-center flex-wrap">
-        <div className="text-2xl font-bold">Logo</div>
+      <div className="flex justify-between items-center flex-wrap gap-2">
+        <Link href='/' className="text-2xl font-bold">Logo</Link>
         <div>
           <input
             type="text"

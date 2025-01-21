@@ -21,6 +21,12 @@ export interface Offers {
   occupants: string;
 }
 
+interface Review {
+  name: string;
+  comment: string;
+  avatar: string;
+  rating: number; 
+} 
 export interface PropertyProps {
   name: string;
   address: Address;
@@ -30,6 +36,8 @@ export interface PropertyProps {
   offers: Offers;
   image: string;
   discount: string;
+  reviews: Review[];
+  images: string[];
 }
 
 export interface PillProps {
